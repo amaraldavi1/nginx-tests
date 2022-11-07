@@ -1,0 +1,12 @@
+services:
+  nginx:
+    build:
+      context: .
+    container_name: nginx-curso
+    ports:
+      - 8080:8080
+    volumes:
+      - ./html:/usr/share/nginx/html/
+      - ./conf:/etc/nginx
+    network_mode: host
+      
